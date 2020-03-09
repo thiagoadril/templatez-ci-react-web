@@ -1,2 +1,2 @@
 # CI/Frontend
-Frontend application model with continuous integration.
+Front-end application model with continuous integration.
