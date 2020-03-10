@@ -1,2 +1,2 @@
-# Template CI/Frontend
-Front-end application model with continuous integration.
+# CI/Frontend - Template
+Front-end application template with continuous integration.
