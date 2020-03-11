@@ -1,2 +1,2 @@
-# CI/Frontend - Template
-Front-end application template with continuous integration.
+# CI Front-end (ReactJS)
+Frontend (ReactJS) application template with continuous integration.
