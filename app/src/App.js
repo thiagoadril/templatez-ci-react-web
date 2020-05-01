@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import { Router, Route, Switch } from "react-router-dom";
+
+/**
+ * Contexts
+ */
+import { useAuth0 } from "./hooks/contexts/auth-context";
+
+/**
+ * History
+ */
+import history from "./utils/history";
+
+/**
+ * Components
+ */
+import NavBar from "./components/Navigation/NavBar"
+
+/** 
+ * Routes
+ * */
+import PrivateRoute from "./components/routes/PrivateRoute";
+
+/** 
+ * Pages
+ * */
+import HomePage from "./pages/HomePage";
+import SecurePage from "./pages/secure/SecurePage";
+import ProfilePage from "./pages/secure/ProfilePage";
+import CustomerPage from "./pages/secure/CustomerPage";
+
+/**
+ * Styles
+ */
 import './App.css';
 
-function App() {
+const App = () => {
+  const { loading } = useAuth0();
+
+  if (loading) {
+    return "Loading...";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <div style={{ padding: 20, textAlign: "center" }}>
+        <NavBar />
+        <div>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <PrivateRoute path="/secure" exact component={SecurePage} />
+            <PrivateRoute path="/secure/profile" exact component={ProfilePage} />
+            <PrivateRoute path="/secure/customer" exact component={CustomerPage} />
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
