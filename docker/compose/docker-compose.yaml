@@ -1,0 +1,11 @@
+version: '3'
+services:
+  company_api:
+    image: 'company/template_api${IMAGE_SUFFIX}'
+    deploy:
+      restart_policy:
+        condition: always
+    ports: 
+      - '${ENDPOINT_API_PORT}:80'
+    environment:
+      - ASPNETCORE_ENVIRONMENT

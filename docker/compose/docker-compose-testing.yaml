@@ -1,0 +1,10 @@
+version: '3'
+services:
+  company_api:
+    networks: 
+      company_api_testing:
+        aliases:
+          - companyapi
+networks:
+  company_api_testing:
+    external: true
