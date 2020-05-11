@@ -2,9 +2,9 @@ version: '3'
 services:
   company_templatez_frontend:
     networks: 
-      company_network_frontend_production:
+      company_templatez_network_frontend_production:
         aliases:
           - frontproduction
 networks:
-  company_network_frontend_production:
+  company_templatez_network_frontend_production:
    external: true

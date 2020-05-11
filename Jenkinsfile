@@ -12,7 +12,7 @@ pipeline {
                 script{
 					PROJECT_NAME="templatez_app_frontend"
 					IMAGE_NAME="company_templatez_frontend"
-					NETWORK_NAME="company_network_frontend"
+					NETWORK_NAME="company_templatez_network_frontend"
                     APP_FOLDER_NAME="app"
                 }
             }                

@@ -2,9 +2,9 @@ version: '3'
 services:
   company_templatez_frontend:
     networks: 
-      company_network_frontend_testing:
+      company_templatez_network_frontend_testing:
         aliases:
           - fronttesting
 networks:
-  company_network_frontend_testing:
+  company_templatez_network_frontend_testing:
    external: true
