@@ -4,7 +4,7 @@ services:
     networks: 
       company_templatez_network_frontend_development:
         aliases:
-          - frontdevelopment
+          - frontenddevelopment
 networks:
   company_templatez_network_frontend_development:
    external: true

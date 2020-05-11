@@ -4,7 +4,7 @@ services:
     networks: 
       company_templatez_network_frontend_testing:
         aliases:
-          - fronttesting
+          - frontendtesting
 networks:
   company_templatez_network_frontend_testing:
    external: true

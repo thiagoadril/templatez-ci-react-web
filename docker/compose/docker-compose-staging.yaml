@@ -4,7 +4,7 @@ services:
     networks: 
       company_templatez_network_frontend_staging:
         aliases:
-          - frontstaging
+          - frontendstaging
 networks:
   company_templatez_network_frontend_staging:
    external: true
