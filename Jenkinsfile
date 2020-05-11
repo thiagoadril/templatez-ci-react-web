@@ -26,7 +26,6 @@ pipeline {
 				echo "-----------------------------------"
 				echo 'Initial cleaning running....'
 				script {
-					//Aplicacões
 					fileOperations([folderDeleteOperation("${APP_FOLDER_NAME}/ci")])
 				}
 				echo '-----------------------------------'
@@ -74,7 +73,6 @@ pipeline {
 				echo '-----------------------------------'
 				echo 'IO starting...'
 				script {
-					//Aplicações
 					fileOperations([folderCopyOperation(destinationFolderPath: "${APP_FOLDER_NAME}/ci/image/build", sourceFolderPath: "${APP_FOLDER_NAME}/build/")])
 					fileOperations([folderCopyOperation(destinationFolderPath: "${APP_FOLDER_NAME}/ci/image/deploy", sourceFolderPath: "${APP_FOLDER_NAME}/tools/deploy/")])
 					fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: "${APP_FOLDER_NAME}/Dockerfile*", targetLocation: "${APP_FOLDER_NAME}/ci/image")])
