@@ -117,7 +117,7 @@ pipeline {
 		stage('ENVIRONMENT') {
 			steps {
 				echo '-----------------------------------'
-				echo 'Configure BASE_BOLDER_NAMElication environment...'
+				echo 'Configure application environment...'
 				script {
 					docker.withTool(DOCKER_TOOL_NAME) {
 						
