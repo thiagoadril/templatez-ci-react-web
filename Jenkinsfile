@@ -10,8 +10,8 @@ pipeline {
 		stage('INIT') {
             steps{
                 script{
-					PROJECT_NAME="template_app_frontend"
-					IMAGE_NAME="company_template_frontend"
+					PROJECT_NAME="templatez_app_frontend"
+					IMAGE_NAME="company_templatez_frontend"
 					NETWORK_NAME="company_network_frontend"
                     APP_FOLDER_NAME="app"
                 }
