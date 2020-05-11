@@ -23,7 +23,7 @@ pipeline {
 		/*
 		 *	[CLEAN - (START)]
 		 */
-		stage('CLEAR (START)CLEAN - (START)') {
+		stage('CLEAN - (START)') {
 			steps {
 				echo "-----------------------------------"
 				echo 'Initial cleaning running....'
