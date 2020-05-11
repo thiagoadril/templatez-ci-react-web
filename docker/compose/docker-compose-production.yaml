@@ -2,9 +2,9 @@ version: '3'
 services:
   company_template_frontend:
     networks: 
-      company_template_frontend_production:
+      company_network_frontend_production:
         aliases:
-          - templatecifront
+          - frontproduction
 networks:
-  company_template_frontend_production:
-    external: true
+  company_network_frontend_production:
+   external: true

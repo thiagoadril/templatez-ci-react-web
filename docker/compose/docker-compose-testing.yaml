@@ -2,9 +2,9 @@ version: '3'
 services:
   company_template_frontend:
     networks: 
-      company_template_frontend_testing:
+      company_network_frontend_testing:
         aliases:
-          - templatecifront
+          - fronttesting
 networks:
-  company_template_frontend_testing:
-    external: true
+  company_network_frontend_testing:
+   external: true
