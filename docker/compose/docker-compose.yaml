@@ -1,9 +1,7 @@
-version: '3'
+version: '3.8'
 services:
   company_templatez_frontend:
     image: 'company_templatez_frontend_${IMAGE_SUFFIX}'
-    deploy:
-      restart_policy:
-        condition: always
+    restart: unless-stopped
     ports: 
       - '${EXTERNAL_FRONTEND_PORT}:80'
